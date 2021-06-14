@@ -1,0 +1,35 @@
+
+
+对于UserInfo表的增加和查询：
+url: 'https://www.hanjz.xyz/ruanjian/userinfo.php'
+
+代码参考：
+onLoad: function () {
+    wx.request({
+      url: 'https://www.hanjz.xyz/ruanjian/userinfo.php',
+      data: {
+        action: 'insert',
+        Uname: 'hanjz',
+        UPwd: 'hanjz',
+        UPhone:'13786xxxxx',
+        UEmail:"12312@qq.com",
+        UState:1,
+      },
+      method: 'GET', 
+      success: function (res) {
+        console.log(res.data);
+      }
+    })
+    wx.request({
+      url: 'https://www.hanjz.xyz/ruanjian/userinfo.php',
+      data: {
+        action: 'chaxun',
+        Uname: 'hanjz',
+
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data);
+      }
+    })
+  },

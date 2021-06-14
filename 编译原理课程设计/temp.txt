@@ -1,0 +1,70 @@
+{输入n,r  ; 从前n个自然数中取r个数作组合}
+program combination
+type
+    s=array [1..20] of integer;
+var
+    s  a;
+    integer n,r;
+procedure  com(integer s,j);
+var integer i,k;
+begin
+   i:=s;
+   while i<n+2-j  do
+     a[r+1-j]:=i;
+     if j<2
+     then  k:=1;
+           while k<r+1 do
+             write(a[k]);
+             k:=k+1
+           endwh
+     else  com(i+1,j-1)
+     fi;
+     i:=i+1
+   endwh
+end
+begin
+read(n); {n为组合的界限}
+read(r); {r为组合数}
+com(1,r)
+end.
+          
+
+
+
+
+
+program p
+type t1=integer;
+var integer v1,v2;
+procedure
+     q(integer i);
+var integer a;
+begin
+    a:=i
+end
+begin
+
+ read(v1);
+ v1:=v1+10;
+ A[i]:=1;
+ 
+ if v1<10
+  then   v1:=v1+10
+  else  v1:=v1-10
+  fi;
+   q(v1)
+
+end.
+
+  
+
+
+ParamTable *paramP = Entry->attrIR.More.ProcAttr.param;
+
+
+
+Stm中，当前单词为其他单词，非期望单词语法错误
+StmMore中出现问题
+ConditionalStm缺失FI
+StmMore中出现问题
+ProgramBody中缺失END

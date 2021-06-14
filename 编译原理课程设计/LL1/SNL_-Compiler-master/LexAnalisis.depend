@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1558508258 source:c:\users\13786\desktop\lexanalisis\lexanalisis\lex_analysis.cpp
+	<bits/stdc++.h>
+	"lex_Analysis.h"
+
+1558424949 c:\users\13786\desktop\lexanalisis\lexanalisis\lex_analysis.h
+	<bits/stdc++.h>
+
+1558508557 source:c:\users\13786\desktop\lexanalisis\lexanalisis\main.cpp
+	"Lex_Analysis.h"
+	<bits/stdc++.h>
+	<windows.h>
+
+1560317821 source:c:\users\liweihan\desktop\snl_-compiler-master\snl_-compiler-master\lex_analysis.cpp
+	<bits/stdc++.h>
+	"lex_Analysis.h"
+
+1560317821 c:\users\liweihan\desktop\snl_-compiler-master\snl_-compiler-master\lex_analysis.h
+	<bits/stdc++.h>
+
+1619484459 source:c:\users\liweihan\desktop\snl_-compiler-master\snl_-compiler-master\main.cpp
+	"Lex_Analysis.h"
+	<bits/stdc++.h>
+	<windows.h>
+

@@ -1,0 +1,67 @@
+ActParamList                  ID KONG INTC (
+ActParamMore                  KONG ,
+AddOp                  + -
+ArrayType                  ARRAY
+AssCall                  . [ ( :=
+AssignmentRest                  . [ :=
+BaseType                  INTEGER CHAR
+CallStmRest                  (
+CmpOp                  = <
+ConditionalStm                  IF
+DeclarePart                  KONG TYPE VAR PROCEDURE
+Exp                  ID INTC (
+Factor                  ID INTC (
+FidMore                  KONG ,
+FieldDecList                  INTEGER CHAR ARRAY
+FieldDecMore                  KONG INTEGER CHAR ARRAY
+FieldVar                  ID
+FieldVarMore                  KONG [
+FormList                  ID
+IdList                  ID
+IdMore                  KONG ,
+InputStm                  READ
+Invar                  ID
+LoopStm                  WHILE
+Low                  INTC
+MultOp                  * /
+OtherFactor                  KONG * /
+OtherRelE                  = <
+OtherTerm                  KONG + -
+OutputStm                  WRITE
+Param                  ID INTEGER CHAR ARRAY RECORD VAR
+ParamDecList                  ID INTEGER CHAR ARRAY RECORD VAR
+ParamList                  ID KONG INTEGER CHAR ARRAY RECORD VAR
+ParamMore                  KONG ;
+ProcBody                  BEGIN
+ProcDec                  KONG PROCEDURE
+ProcDecMore                  KONG PROCEDURE
+ProcDecPart                  KONG TYPE VAR PROCEDURE
+ProcDeclaration                  PROCEDURE
+ProcName                  ID
+Program                  PROGRAM
+ProgramBody                  BEGIN
+ProgramHead                  PROGRAM
+ProgramName                  ID
+RecType                  RECORD
+RelExp                  ID INTC (
+ReturnStm                  RETURN
+Stm                  ID IF WHILE READ WRITE RETURN
+StmList                  ID IF WHILE READ WRITE RETURN
+StmMore                  KONG ;
+StructureType                  ARRAY RECORD
+Term                  ID INTC (
+Top                  INTC
+TypeDec                  KONG TYPE
+TypeDecList                  ID
+TypeDecMore                  ID KONG
+TypeDeclaration                  TYPE
+TypeId                  ID
+TypeName                  ID INTEGER CHAR ARRAY RECORD
+VarDec                  KONG VAR
+VarDecList                  ID INTEGER CHAR ARRAY RECORD
+VarDecMore                  ID KONG INTEGER CHAR ARRAY RECORD
+VarDeclaration                  VAR
+VarIdList                  ID
+VarIdMore                  KONG ,
+VariMore                  . KONG [
+Variable                  ID

@@ -1,0 +1,67 @@
+ActParamList                  )
+ActParamMore                  )
+AddOp                  ID INTC (
+ArrayType                  ID ;
+AssCall                  ; END ELSE FI ENDWH
+AssignmentRest                  ; END ELSE FI ENDWH
+BaseType                  ID ;
+CallStmRest                  ; END ELSE FI ENDWH
+CmpOp                  ID INTC (
+ConditionalStm                  ; END ELSE FI ENDWH
+DeclarePart                  BEGIN
+Exp                  = ; ] END , ) THEN ELSE FI DO ENDWH <
+Factor                  = ; ] END , ) THEN ELSE FI DO ENDWH < + - * /
+FidMore                  ; )
+FieldDecList                  END
+FieldDecMore                  END
+FieldVar                  = ; ] END , ) := THEN ELSE FI DO ENDWH < + - * /
+FieldVarMore                  = ; ] END , ) := THEN ELSE FI DO ENDWH < + - * /
+FormList                  ; )
+IdList                  ;
+IdMore                  ;
+InputStm                  ; END ELSE FI ENDWH
+Invar                  )
+LoopStm                  ; END ELSE FI ENDWH
+Low                  ..
+MultOp                  ID INTC (
+OtherFactor                  = ; ] END , ) THEN ELSE FI DO ENDWH < + -
+OtherRelE                  THEN DO
+OtherTerm                  = ; ] END , ) THEN ELSE FI DO ENDWH <
+OutputStm                  ; END ELSE FI ENDWH
+Param                  ; )
+ParamDecList                  )
+ParamList                  )
+ParamMore                  )
+ProcBody                  PROCEDURE BEGIN
+ProcDec                  BEGIN
+ProcDecMore                  BEGIN
+ProcDecPart                  BEGIN
+ProcDeclaration                  BEGIN
+ProcName                  (
+Program                  #
+ProgramBody                  . PROCEDURE BEGIN
+ProgramHead                  TYPE VAR PROCEDURE BEGIN
+ProgramName                  TYPE VAR PROCEDURE BEGIN
+RecType                  ID ;
+RelExp                  THEN DO
+ReturnStm                  ; END ELSE FI ENDWH
+Stm                  ; END ELSE FI ENDWH
+StmList                  END ELSE FI ENDWH
+StmMore                  END ELSE FI ENDWH
+StructureType                  ID ;
+Term                  = ; ] END , ) THEN ELSE FI DO ENDWH < + -
+Top                  ]
+TypeDec                  VAR PROCEDURE BEGIN
+TypeDecList                  VAR PROCEDURE BEGIN
+TypeDecMore                  VAR PROCEDURE BEGIN
+TypeDeclaration                  VAR PROCEDURE BEGIN
+TypeId                  =
+TypeName                  ID ;
+VarDec                  PROCEDURE BEGIN
+VarDecList                  PROCEDURE BEGIN
+VarDecMore                  PROCEDURE BEGIN
+VarDeclaration                  PROCEDURE BEGIN
+VarIdList                  ;
+VarIdMore                  ;
+VariMore                  = ; ] END , ) := THEN ELSE FI DO ENDWH < + - * /
+Variable                  = ; ] END , ) THEN ELSE FI DO ENDWH < + - * /

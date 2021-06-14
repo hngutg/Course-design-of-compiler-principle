@@ -1,0 +1,323 @@
+Program->ProgramHead DeclarePart ProgramBody . 
+ProgramHead->PROGRAM ProgramName 
+ProgramName->ID 
+DeclarePart->TypeDec VarDec ProcDec 
+TypeDec->KONG 
+VarDec->VarDeclaration 
+VarDeclaration->VAR VarDecList 
+VarDecList->TypeName VarIdList ; VarDecMore 
+TypeName->BaseType 
+BaseType->INTEGER 
+VarIdList->ID VarIdMore 
+VarIdMore->, VarIdList 
+VarIdList->ID VarIdMore 
+VarIdMore->, VarIdList 
+VarIdList->ID VarIdMore 
+VarIdMore->, VarIdList 
+VarIdList->ID VarIdMore 
+VarIdMore->, VarIdList 
+VarIdList->ID VarIdMore 
+VarIdMore->KONG 
+VarDecMore->VarDecList 
+VarDecList->TypeName VarIdList ; VarDecMore 
+TypeName->StructureType 
+StructureType->ArrayType 
+ArrayType->ARRAY [ Low .. Top ] OF BaseType 
+Low->INTC 
+Top->INTC 
+BaseType->INTEGER 
+VarIdList->ID VarIdMore 
+VarIdMore->KONG 
+VarDecMore->KONG 
+ProcDec->ProcDeclaration 
+ProcDeclaration->PROCEDURE ProcName ( ParamList ) ; ProcDecPart ProcBody ProcDecMore 
+ProcName->ID 
+ParamList->KONG 
+ProcDecPart->DeclarePart 
+DeclarePart->TypeDec VarDec ProcDec 
+TypeDec->KONG 
+VarDec->KONG 
+ProcDec->KONG 
+ProcBody->ProgramBody 
+ProgramBody->BEGIN StmList END 
+StmList->Stm StmMore 
+Stm->OutputStm 
+OutputStm->WRITE ( Exp ) 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->KONG 
+ProcDecMore->KONG 
+ProgramBody->BEGIN StmList END 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->LoopStm 
+LoopStm->WHILE RelExp DO StmList ENDWH 
+RelExp->Exp OtherRelE 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+OtherRelE->CmpOp Exp 
+CmpOp->< 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmList->Stm StmMore 
+Stm->LoopStm 
+LoopStm->WHILE RelExp DO StmList ENDWH 
+RelExp->Exp OtherRelE 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+OtherRelE->CmpOp Exp 
+CmpOp->< 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->MultOp Term 
+MultOp->* 
+Term->Factor OtherFactor 
+Factor->( Exp ) 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->AddOp Exp 
+AddOp->+ 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->AddOp Exp 
+AddOp->+ 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->CallStmRest 
+CallStmRest->( ActParamList ) 
+ActParamList->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->OutputStm 
+OutputStm->WRITE ( Exp ) 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->AddOp Exp 
+AddOp->+ 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+第24行	语法错误: 1
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->OutputStm 
+OutputStm->WRITE ( Exp ) 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->LoopStm 
+LoopStm->WHILE RelExp DO StmList ENDWH 
+RelExp->Exp OtherRelE 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+OtherRelE->CmpOp Exp 
+CmpOp->< 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+OtherFactor->KONG 
+OtherTerm->AddOp Exp 
+AddOp->+ 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->ID AssCall 
+AssCall->AssignmentRest 
+AssignmentRest->VariMore := Exp 
+VariMore->KONG 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->AddOp Exp 
+AddOp->+ 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->INTC 
+第30行	语法错误: 1
+OtherTerm->KONG 
+StmMore->KONG 
+StmMore->; StmList 
+StmList->Stm StmMore 
+Stm->OutputStm 
+OutputStm->WRITE ( Exp ) 
+Exp->Term OtherTerm 
+Term->Factor OtherFactor 
+Factor->Variable 
+Variable->ID VariMore 
+VariMore->KONG 
+OtherFactor->KONG 
+OtherTerm->KONG 
+StmMore->KONG 
